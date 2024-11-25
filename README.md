@@ -1,7 +1,3 @@
-Here’s an updated and customized version of the `README.md` file for your **Plant Guard** project:
-
----
-
 # Plant Guard
 
 Plant Guard is an AI-powered web application that helps users identify plants effortlessly. Simply upload an image of a plant, and the app provides its name, scientific details, and care instructions.
@@ -32,7 +28,7 @@ The project consists of:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com//plant-guard.git
+   git clone https://github.com/hbkysf27/plant-guard
    cd plant-guard
    ```
 

@@ -1,70 +1,146 @@
-# Getting Started with Create React App
+Here’s an updated and customized version of the `README.md` file for your **Plant Guard** project:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+# Plant Guard
 
-In the project directory, you can run:
+Plant Guard is an AI-powered web application that helps users identify plants effortlessly. Simply upload an image of a plant, and the app provides its name, scientific details, and care instructions.
+
+## Features
+
+- Upload or capture an image to identify plants.
+- AI-powered plant identification.
+- Detailed scientific names and plant family insights.
+- Care instructions tailored for each plant.
+- Responsive design for desktop and mobile.
+
+## Project Structure
+
+The project consists of:
+
+- **Frontend**: Built with React and styled using Tailwind CSS.
+- **Backend**: A Node.js server using Express.js to handle AI-based plant identification.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v16 or higher) installed on your machine.
+- A working API key for AI-based plant identification.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com//plant-guard.git
+   cd plant-guard
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Set up the environment variables:
+   - Create a `.env` file in the project root for the frontend and add:
+     ```
+     REACT_APP_BACKEND_URL=http://localhost:5000/api/identify
+     ```
+   - For the backend, create a `.env` file in the backend folder and add:
+     ```
+     GEMINI_API_KEY=your-google-generative-ai-key
+     PORT=5000
+     ```
+
+4. Start the backend server:
+   ```bash
+   cd Backend
+   node server.js
+   ```
+
+5. Start the frontend development server:
+   ```bash
+   npm start
+   ```
+
+6. Open your browser and visit [http://localhost:3000](http://localhost:3000).
+
+## Scripts
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Runs the app in development mode.
+- Access it at [http://localhost:3000](http://localhost:3000).
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Builds the app for production.
+- Outputs to the `build` folder.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `npm test`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Launches the test runner in interactive watch mode.
 
-### `npm run eject`
+### `npm run lint`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Runs ESLint to analyze code for potential errors.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Backend API
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Endpoint: `POST /api/identify`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Request Body**:
+  - `image`: Base64-encoded string of the image.
+  - `mimeType`: MIME type of the image (e.g., `image/png`).
+- **Response**:
+  ```json
+  {
+    "name": "Plant Name",
+    "scientificName": "Scientific Name",
+    "family": "Plant Family",
+    "care": ["Care instruction 1", "Care instruction 2"]
+  }
+  ```
 
-## Learn More
+## Deployment
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Build the production-ready files:
+   ```bash
+   npm run build
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. Deploy the `build` folder to your hosting service (e.g., Hostinger, Netlify).
 
-### Code Splitting
+3. Ensure the backend is also deployed and configured with the correct API key.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Technologies Used
 
-### Analyzing the Bundle Size
+- **Frontend**:
+  - React.js
+  - Tailwind CSS
+  - React Router
+  - React Icons
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Backend**:
+  - Node.js
+  - Express.js
+  - Google Generative AI API
 
-### Making a Progressive Web App
+## Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Home Page
+[Upload or capture plant images.]
 
-### Advanced Configuration
+### Features Section
+[Description of AI features.]
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Contact Section
+[Users can reach out with questions.]
 
-### Deployment
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Contributions are welcome! Fork this repository and submit a pull request.
 
-### `npm run build` fails to minify
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.
